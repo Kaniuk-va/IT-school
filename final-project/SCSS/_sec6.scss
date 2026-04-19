@@ -1,0 +1,69 @@
+$main-color: #9C2482;
+$third-color: #524848;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec6-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 911px;
+
+    .title {
+        text-align: center;
+        margin-bottom: 24px;
+        @include font("Playfair Display", 700, Bold, 40px, $main-color);
+    }
+
+    .box {
+        margin-right: 20px;
+
+        hr {
+            width: 700px;
+            border: 1px solid $main-color;
+        }
+
+        h3 {
+            @include font("Montserrat", 700, Bold, 24px, #121212);
+            margin: 29px 0 29px 0;
+        }
+
+        p {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            margin: 20px 0 20px 0;
+        }
+    }
+
+    button {
+        width: 222px;
+        height: 54px;
+        border: none;
+        background-color: $main-color;
+        margin-top: 30px;
+
+        @include font("Montserrat", 600, Bold, 22px, $second-color);
+    }
+
+    button:hover {
+        animation: button 0.1s linear forwards;
+    }
+}
+
+@keyframes button {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        border-radius: 30px;
+        background-color: rgb(173, 39, 197);
+    }
+}

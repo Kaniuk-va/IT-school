@@ -1,0 +1,61 @@
+$main-color: #9C2482;
+$third-color: #524848;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec7-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 410px;
+
+    .title {
+        text-align: center;
+        margin-bottom: 24px;
+        @include font("Playfair Display", 700, Bold, 40px, $main-color);
+    }
+
+    .arrow1 {
+        width: 15px;
+        height: 30px;
+        margin: 98px 25px 0 0;
+    }
+
+    .arrow2 {
+        width: 15px;
+        height: 30px;
+        margin: 98px 0 0 45px;
+    }
+
+    .box {
+        margin-left: 20px;
+        width: 640px;
+        height: 240px;
+        border: 1px solid $main-color;
+
+        .head {
+            h3 {
+                @include font("Montserrat", 500, Medium, 24px, $main-color);
+                margin: 20px 345px 10px 35px;
+            }
+        }
+
+        p {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            margin-left: 35px;
+        }
+
+        img {
+            width: 140px;
+            height: 24px;
+            margin-top: 25px;
+        }
+    }
+}

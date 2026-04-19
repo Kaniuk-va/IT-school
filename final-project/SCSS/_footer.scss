@@ -1,0 +1,78 @@
+$main-color: #9C2482;
+$second-color: #F5F5F5;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+footer {
+    height: 168px;
+    background-color: $main-color;
+    margin-top: 112px;
+
+    .footer-wrap {
+        justify-content: center;
+        height: 90px;
+        background-color: $main-color;
+
+        .footer-logo {
+            margin: 20px 132px 0 0;
+
+            img {
+                width: 90px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            h2 {
+                @include font("Playfair Display", 400, Regular, 32px, $second-color);
+            }
+        }
+
+        .footer-menu {
+            margin-top: 31px;
+
+            .footer-links {
+                @include font("Montserrat", 700, Bold, 16px, $second-color);
+                margin-right: 64px;
+                display: inline-block;
+            }
+
+            .footer-links:hover {
+                animation: a 0.1s linear forwards;
+            }
+        }
+
+        .footer-social {
+            margin-top: 30px;
+
+            h4 {
+                @include font("Montserrat", 700, Bold, 16px, $second-color);
+                margin-bottom: 5px
+            }
+
+            p {
+                @include font("Montserrat", 400, Regular, 16px, $second-color);
+            }
+
+            img {
+                margin: 20px 25px 0 0;
+            }
+        }
+    }
+}
+
+@keyframes a {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}

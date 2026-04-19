@@ -1,0 +1,92 @@
+$main-color: #9C2482;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec3-wrap {
+    height: 531px;
+
+    .title {
+        text-align: center;
+        @include font("Playfair Display", 700, Bold, 40px, $main-color);
+        margin-top: 80px;
+        margin-bottom: 24px;
+    }
+
+    .imgs {
+        justify-content: center;
+        margin-top: 30px;
+
+        img {
+            margin-right: 305px;
+        }
+
+        .im4 {
+            margin-right: 0px;
+        }
+    }
+
+    .hr1 {
+        border: 1px solid $main-color;
+        margin-top: 20px;
+    }
+
+    .text {
+        margin-top: 20px;
+        justify-content: center;
+
+        .p1 {
+            @include font("Montserrat", 500, Medium, 24px, #121212);
+            margin-right: 310px;
+        }
+
+        .p2 {
+            @include font("Montserrat", 500, Medium, 24px, #121212);
+            margin-right: 310px;
+        }
+
+        .p3 {
+            @include font("Montserrat", 500, Medium, 24px, #121212);
+            margin-right: 255px;
+        }
+
+        .p4 {
+            @include font("Montserrat", 500, Medium, 24px, #121212);
+        }
+    }
+
+    .hr2 {
+        border: 1px solid $main-color;
+        margin-top: 25px;
+    }
+
+    .text2 {
+        margin-top: 20px;
+        justify-content: center;
+
+        .p5 {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            margin-right: 95px;
+        }
+
+        .p6 {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            margin-right: 90px;
+        }
+
+        .p7 {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            margin-right: 105px;
+        }
+
+        .p8 {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+        }
+    }
+}

@@ -1,0 +1,80 @@
+$main-color: #9C2482;
+$second-color: #F5F5F5;
+$third-color: #524848;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec1-wrap {
+    height: 693px;
+    background-image: url(/images_sec1/background.png);
+
+    .text {
+        padding: 260px 0 0 90px;
+
+        h2 {
+            @include font("Playfair Display", 700, Bold, 54px, $main-color);
+            margin-bottom: 20px;
+        }
+
+        p {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 270px;
+            height: 53px;
+            background-color: $main-color;
+            border: none;
+
+            @include font("Montserrat", 700, Bold, 18px, $second-color);
+        }
+
+        button:hover {
+            animation: button 0.1s linear forwards;
+        }
+    }
+
+    .social {
+        margin: 150px 0 0 90px;
+
+        a{
+            @include font("Montserrat", 700, Bold, 16px, $third-color);
+            margin-right: 30px;
+            display: inline-block; 
+        }
+
+        a:hover {
+            animation: a 0.1s linear forwards;
+        }
+    }
+}
+
+@keyframes button {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        border-radius: 30px;
+        background-color: rgb(173, 39, 197);
+    }
+}
+
+@keyframes a {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}

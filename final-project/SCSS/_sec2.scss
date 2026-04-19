@@ -1,0 +1,94 @@
+$main-color: #9C2482;
+$second-color: #F5F5F5;
+$third-color: #524848;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec2-wrap {
+    position: relative;
+    height: 627px;
+    margin-top: 90px;
+
+    .title {
+        text-align: center;
+        @include font("Playfair Display", 700, Bold, 40px, $main-color);
+    }
+
+    .img {
+        margin: 30px 0 0 90px;
+
+        .main {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .play {
+            position: absolute;
+            top: 466px;
+            left: 100px;
+            z-index: 2;
+        }
+
+        .bg {
+            position: absolute;
+            top: 448px;
+            left: 86px;
+            z-index: 1;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin: 0 0 0 900px;
+
+        .text1 {
+            text-align: left;
+            margin: 0 0 9px 145px;
+            @include font("Montserrat", 700, Regular, 24px, #121212);
+        }
+
+        .text2 {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            text-align: left;
+            margin-left: 145px;
+            margin-bottom: 30px;
+        }
+
+        span {
+            @include font("Playfair Display", 700, Bold, 24px, #121212);
+        }
+
+        button {
+            width: 222px;
+            height: 54px;
+            border: none;
+            background-color: $main-color;
+            margin-right: 190px;
+
+            @include font("Montserrat", 700, Bold, 18px, $second-color);
+        }
+
+        button:hover {
+            animation: button 0.1s linear forwards;
+        }
+    }
+}
+
+@keyframes button {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        border-radius: 30px;
+        background-color:rgb(173, 39, 197);
+    }
+}

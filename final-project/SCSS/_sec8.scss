@@ -1,0 +1,103 @@
+$main-color: #9C2482;
+$second-color: #F5F5F5;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec8-wrap {
+    justify-content: center;
+    margin-top: 100px;
+
+    .text {
+        .title {
+            @include font("Playfair Display", 700, Bold, 29px, $main-color);
+            margin-left: 41px;
+        }
+
+        .form {
+            margin-left: 40px;
+            flex-direction: column;
+
+            .inp_with_arrow {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    width: 20px;
+                    height: 10px;
+                    top: 50px;
+                    right: 116px;
+                }
+            }
+
+            input {
+                border: none;
+                border-bottom: 1px solid black;
+                width: 608px;
+                margin: 30px 0 5px 5px;
+                height: 43px;
+            }
+
+            input::placeholder {
+                @include font("Montserrat", 400, Regular, 24px, #121212);
+            }
+
+            .foot {
+                .inp_with_arrow {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        width: 20px;
+                        height: 10px;
+                        top: 50px;
+                        right: 116px;
+
+                        right: 0px;
+                    }
+                }
+
+                input {
+                    width: 280px;
+                    margin-left: 47px;
+                }
+
+                .inp1 {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        button {
+            margin: 50px 0 0 426px;
+            width: 222px;
+            height: 54px;
+            border: none;
+            background-color: $main-color;
+
+            @include font("Montserrat", 700, Bold, 18px, $second-color);
+        }
+
+        button:hover {
+            animation: button 0.1s linear forwards;
+        }
+    }
+}
+
+@keyframes button {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        border-radius: 30px;
+        background-color:rgb(173, 39, 197);
+    }
+}

@@ -1,0 +1,88 @@
+$main-color: #9C2482;
+$third-color: #524848;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec4-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 510px;
+
+    .title {
+        text-align: center;
+        @include font("Playfair Display", 700, Bold, 40px, $main-color);
+    }
+
+    .main {
+        margin-top: 24px;
+        position: relative;
+    }
+
+    .arrow1 {
+        width: 15px;
+        height: 30px;
+        margin: 182px 60px 0 0;
+    }
+
+    .arrow2 {
+        width: 15px;
+        height: 30px;
+        margin: 182px 0 0 100px;
+    }
+
+    .img1 {
+        margin: 0 30px 0 70px;
+
+    }
+
+    .img2 {
+        position: absolute;
+        right: 50px;
+        bottom: 0px
+    }
+
+    .text {
+        h3 {
+            @include font("Montserrat", 700, Bold, 24px, black);
+        }
+
+        p {
+            @include font("Montserrat", 400, Regular, 16px, $third-color);
+            margin-top: 30px;
+        }
+
+        button {
+            width: 290px;
+            height: 67px;
+            border: none;
+            background-color: $main-color;
+            margin-top: 30px;
+
+            @include font("Montserrat", 700, Bold, 18px, $second-color);
+        }
+
+        button:hover {
+            animation: button 0.1s linear forwards;
+        }
+    }
+}
+
+@keyframes button {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        border-radius: 30px;
+        background-color:rgb(173, 39, 197);
+    }
+}

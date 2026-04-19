@@ -1,0 +1,62 @@
+$main-color: #9C2482;
+$third-color: #524848;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec5-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 708px;
+
+    .title {
+        text-align: center;
+        @include font("Playfair Display", 700, Bold, 40px, $main-color);
+    }
+
+    .menu {
+        p {
+            @include font("Montserrat", 700, Bold, 24px, $third-color);
+            margin: 25px 60px 0 0;
+        }
+
+        span {
+            @include font("Montserrat", 700, Bold, 24px, #121212);
+        }
+    }
+
+    .main {
+        .arrow1 {
+            width: 15px;
+            height: 30px;
+            margin: 182px 30px 0 0;
+        }
+
+        .arrow2 {
+            width: 15px;
+            height: 30px;
+            margin: 182px 0 0 200px;
+        }
+
+        .box {
+            text-align: center;
+            margin: 10px 59px 0 0;
+
+            h3 {
+                @include font("Montserrat", 700, Bold, 18px, $main-color);
+                margin: 10px 0 5px 0;
+            }
+
+            p {
+                @include font("Montserrat", 700, Bold, 18px, $third-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+$main-color: #9C2482;
+
+@mixin font ($el1, $el2, $el3, $el4, $el5) {
+    font-family: $el1;
+    font-weight: $el2;
+    font-style: $el3;
+    font-size: $el4;
+    color: $el5;
+    line-height: 160%;
+}
+
+.sec9-wrap {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    .title {
+        text-align: center;
+        @include font("Playfair Display", 700, Bold, 36px, $main-color);
+        margin-bottom: 30px;
+    }
+
+    .text {
+        margin-left: 50px;
+
+        h5 {
+            @include font("Montserrat", 400, Regular, 24px, black);
+            margin-bottom: 5px;
+        }
+
+        p {
+            @include font("Montserrat", 400, Regular, 24px, $main-color);
+            margin-bottom: 5px;
+        }
+
+        .imgs {
+            img {
+                margin-right: 25px;
+            }
+        }
+
+        button {
+            margin: 50px 0 0 0px;
+            width: 222px;
+            height: 54px;
+            border: none;
+            background-color: $main-color;
+
+            @include font("Montserrat", 700, Bold, 18px, $second-color);
+        }
+
+        button:hover {
+            animation: button 0.1s linear forwards;
+        }
+    }
+}
+
+@keyframes button {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        border-radius: 30px;
+        background-color:rgb(173, 39, 197);
+    }
+}
